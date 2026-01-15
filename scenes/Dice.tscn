@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://df6k8ppf0nm25"]
+
+[ext_resource type="Script" uid="uid://cint2eb61je47" path="res://scripts/dice.gd" id="1_7yeca"]
+
+[node name="Dice" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -952.0
+offset_bottom = -548.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7yeca")
+diceMax = PackedInt32Array(0)
+
+[node name="Dice1" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 75.0
+offset_bottom = 75.0
+color = Color(1, 0.09803922, 0, 1)
+
+[node name="Dice1" type="ColorRect" parent="Dice1"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 45.0
+
+[node name="Label" type="Label" parent="Dice1/Dice1"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1

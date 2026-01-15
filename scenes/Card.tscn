@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://fvc6hmegws7v"]
+
+[ext_resource type="Script" uid="uid://dvmdi42ww3l8h" path="res://scripts/card.gd" id="1_yiag5"]
+
+[node name="Card" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1024.0
+offset_bottom = -468.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yiag5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 180.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 107.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Ace of Spades"
+
+[node name="CardForm" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
