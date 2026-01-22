@@ -12,8 +12,9 @@ offset_bottom = -548.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7yeca")
+diceMax = PackedInt32Array(0)
 
-[node name="DiceOutline" type="ColorRect" parent="."]
+[node name="Dice1" type="ColorRect" parent="."]
 layout_mode = 0
 offset_left = 25.0
 offset_top = 25.0
@@ -21,14 +22,14 @@ offset_right = 75.0
 offset_bottom = 75.0
 color = Color(1, 0.09803922, 0, 1)
 
-[node name="Dice" type="ColorRect" parent="DiceOutline"]
+[node name="Dice1" type="ColorRect" parent="Dice1"]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
 offset_right = 45.0
 offset_bottom = 45.0
 
-[node name="DiceLabel" type="Label" parent="DiceOutline/Dice"]
+[node name="Label" type="Label" parent="Dice1/Dice1"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -37,8 +38,3 @@ theme_override_font_sizes/font_size = 20
 text = "6"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Rolling" type="Timer" parent="."]
-wait_time = 0.009999999999999998
-
-[connection signal="timeout" from="Rolling" to="." method="_on_timer_timeout"]

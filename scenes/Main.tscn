@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://m5d7ctsusrni"]
+[gd_scene load_steps=4 format=3 uid="uid://m5d7ctsusrni"]
 
+[ext_resource type="Script" uid="uid://dw5vbtmft0coh" path="res://scripts/main.gd" id="1_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://fvc6hmegws7v" path="res://scenes/Card.tscn" id="1_elqb8"]
 [ext_resource type="PackedScene" uid="uid://df6k8ppf0nm25" path="res://scenes/Dice.tscn" id="2_rvslj"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0bbpv")
 
 [node name="Card" parent="." instance=ExtResource("1_elqb8")]
 layout_mode = 1
@@ -20,3 +22,5 @@ offset_bottom = 4.0
 
 [node name="Dice" parent="." instance=ExtResource("2_rvslj")]
 layout_mode = 1
+maxVal = 6
+val = 1
