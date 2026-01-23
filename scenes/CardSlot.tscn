@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bepjsdrc8el8w"]
+
+[ext_resource type="Script" uid="uid://doerpw7eq6mec" path="res://scripts/card_slot.gd" id="1_us08b"]
+
+[node name="CardSlot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1452.0
+offset_bottom = -700.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_us08b")
+
+[node name="Border" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 148.0
+offset_bottom = 200.0
+
+[node name="Slot" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 138.0
+offset_bottom = 190.0
+color = Color(0.3403393, 0.34033933, 0.3403393, 1)

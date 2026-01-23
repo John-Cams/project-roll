@@ -37,3 +37,4 @@ func _on_timer_timeout() -> void:
 	rollTimes += 1
 	$DiceOutline/Dice/DiceLabel.text = str(randi_range(1,maxVal))
 		
+		

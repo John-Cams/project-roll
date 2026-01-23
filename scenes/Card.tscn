@@ -7,8 +7,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1024.0
-offset_bottom = -468.0
+offset_right = -1472.0
+offset_bottom = -720.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yiag5")
@@ -29,3 +29,6 @@ text = "Ace of Spades"
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
