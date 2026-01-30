@@ -1,6 +1,5 @@
 extends Node
 
-var CARD_DEFS:Dictionary = {
-	"Ace of Spades":["One droplet is nothing, many can be anything", "Pips are hydro 1.5x value \n Pips are 3x value against pyro"]
+const CARD_DEFS:Dictionary = {
+	"Droplet":["Addition!", "One droplet is nothing, many can be anything", Color(1.0, 1.0, 1.0, 1.0)]
 }
-3

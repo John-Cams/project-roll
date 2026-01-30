@@ -1,5 +1,7 @@
 extends Node
 
+var dice:Array[Dice]
+
 var cards:Array[Card]
 var cardsHovered:Array[bool]
 var topCard:int = -1

@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bwhn3ui6bkxel"]
+
+[ext_resource type="Script" uid="uid://yv2vn300abj" path="res://scripts/card_tray.gd" id="1_bxwc1"]
+[ext_resource type="PackedScene" uid="uid://bepjsdrc8el8w" path="res://scenes/CardSlot.tscn" id="1_x3t2j"]
+
+[node name="CardTray" type="Control" unique_id=750683076]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1204.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bxwc1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=620253372]
+layout_mode = 0
+offset_right = 396.0
+offset_bottom = 720.0
+
+[node name="CardSlot" parent="." unique_id=273034905 instance=ExtResource("1_x3t2j")]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 40.0
+offset_right = -208.0
+offset_bottom = -480.0
+
+[node name="CardSlot2" parent="." unique_id=1505844268 instance=ExtResource("1_x3t2j")]
+layout_mode = 1
+offset_left = 208.0
+offset_top = 37.0
+offset_right = -40.0
+offset_bottom = -483.0
+
+[node name="CardSlot3" parent="." unique_id=65764206 instance=ExtResource("1_x3t2j")]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 260.0
+offset_right = -208.0
+offset_bottom = -260.0
+
+[node name="CardSlot4" parent="." unique_id=671438630 instance=ExtResource("1_x3t2j")]
+layout_mode = 1
+offset_left = 208.0
+offset_top = 260.0
+offset_right = -40.0
+offset_bottom = -260.0
+
+[node name="CardSlot5" parent="." unique_id=589648836 instance=ExtResource("1_x3t2j")]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 480.0
+offset_right = -208.0
+offset_bottom = -40.0
+
+[node name="CardSlot6" parent="." unique_id=336051279 instance=ExtResource("1_x3t2j")]
+layout_mode = 1
+offset_left = 208.0
+offset_top = 480.0
+offset_right = -40.0
+offset_bottom = -40.0

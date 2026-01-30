@@ -7,8 +7,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -952.0
-offset_bottom = -548.0
+offset_right = -1500.0
+offset_bottom = -800.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7yeca")
@@ -39,6 +39,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Rolling" type="Timer" parent="."]
-wait_time = 0.009999999999999998
+wait_time = 0.05
 
 [connection signal="timeout" from="Rolling" to="." method="_on_timer_timeout"]
