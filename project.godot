@@ -15,13 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="project-roll"
-run/main_scene="uid://m5d7ctsusrni"
+run/main_scene="uid://b6n50ectypwv8"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://images/icon.svg"
 
 [autoload]
 
-Global="*res://scripts/global.gd"
+Global="*res://Old/scripts/global.gd"
 AllCards="*uid://l6xnws5xd4hk"
 
 [display]

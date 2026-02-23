@@ -1,44 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://df6k8ppf0nm25"]
+[gd_scene format=3 uid="uid://df6k8ppf0nm25"]
 
-[ext_resource type="Script" uid="uid://cint2eb61je47" path="res://scripts/dice.gd" id="1_7yeca"]
+[ext_resource type="Script" uid="uid://djmsm5eph11j0" path="res://scenes/dice.gd" id="1_7yeca"]
 
-[node name="Dice" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1500.0
-offset_bottom = -800.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Dice" type="Node2D" unique_id=590207499]
 script = ExtResource("1_7yeca")
 
-[node name="DiceOutline" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 25.0
-offset_top = 25.0
-offset_right = 75.0
-offset_bottom = 75.0
-color = Color(1, 0.09803922, 0, 1)
-
-[node name="Dice" type="ColorRect" parent="DiceOutline"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 45.0
-offset_bottom = 45.0
-
-[node name="DiceLabel" type="Label" parent="DiceOutline/Dice"]
-layout_mode = 0
+[node name="Border" type="ColorRect" parent="." unique_id=1801610929]
 offset_right = 40.0
 offset_bottom = 40.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "6"
+
+[node name="Inner" type="ColorRect" parent="." unique_id=1822556328]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 35.0
+offset_bottom = 35.0
+color = Color(0.2784314, 1, 1, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1523684875]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 35.0
+offset_bottom = 35.0
+text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Rolling" type="Timer" parent="."]
-wait_time = 0.05
-
-[connection signal="timeout" from="Rolling" to="." method="_on_timer_timeout"]
