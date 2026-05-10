@@ -21,8 +21,8 @@ config/icon="res://images/icon.svg"
 
 [autoload]
 
-Global="*res://Old/scripts/global.gd"
-AllCards="*uid://l6xnws5xd4hk"
+Global="*uid://c3u68xnugih61"
+CardDefs="*uid://ccx3gn51hnow2"
 
 [display]
 

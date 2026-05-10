@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://c8nregsjni6lg"]
+
+[ext_resource type="Script" uid="uid://cig04s6eont46" path="res://scenes/dice_view.gd" id="1_e457s"]
+[ext_resource type="PackedScene" uid="uid://f3kvfi2r5ur5" path="res://scenes/Dice.tscn" id="3_pgiel"]
+
+[sub_resource type="Environment" id="Environment_145fb"]
+background_mode = 2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xswbd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pgiel"]
+size = Vector3(5, 0.1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xswbd"]
+size = Vector3(5, 0.1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e457s"]
+size = Vector3(0.1, 1, 5)
+
+[sub_resource type="SystemFont" id="SystemFont_e457s"]
+subpixel_positioning = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xswbd"]
+size = Vector3(100, 1, 100)
+
+[node name="Control" type="Node3D" unique_id=857461478]
+script = ExtResource("1_e457s")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1619383863]
+transform = Transform3D(-4.371139e-08, 0.99999994, 4.3711385e-08, 0, -4.3711385e-08, 0.99999994, 1, 4.3711385e-08, 1.9106853e-15, 0, 4, 0)
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1846153823]
+environment = SubResource("Environment_145fb")
+
+[node name="Floor" type="RigidBody3D" parent="." unique_id=1541374708]
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_xswbd")
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=490488337]
+shape = SubResource("BoxShape3D_pgiel")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1311699883]
+visible = false
+mesh = SubResource("BoxMesh_xswbd")
+
+[node name="Cieling" type="RigidBody3D" parent="." unique_id=1696712020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_xswbd")
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cieling" unique_id=489684731]
+shape = SubResource("BoxShape3D_pgiel")
+
+[node name="Wall1" type="RigidBody3D" parent="." unique_id=1808790188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.5, 0)
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_xswbd")
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall1" unique_id=911479073]
+shape = SubResource("BoxShape3D_e457s")
+
+[node name="Wall2" type="RigidBody3D" parent="." unique_id=205315471]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0.5, 2.5)
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_xswbd")
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2" unique_id=904560496]
+shape = SubResource("BoxShape3D_e457s")
+
+[node name="Wall3" type="RigidBody3D" parent="." unique_id=637156138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.5, 0)
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_xswbd")
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall3" unique_id=1732963357]
+shape = SubResource("BoxShape3D_e457s")
+
+[node name="Wall4" type="RigidBody3D" parent="." unique_id=1990618880]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0.5, -2.5)
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_xswbd")
+gravity_scale = 0.0
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall4" unique_id=1707764019]
+shape = SubResource("BoxShape3D_e457s")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=202013256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6370773, 0)
+omni_range = 1.0
+
+[node name="Label3D" type="Label3D" parent="." unique_id=694319694]
+visible = false
+billboard = 1
+text = "Hello"
+font = SubResource("SystemFont_e457s")
+font_size = 60
+
+[node name="Dice" parent="." unique_id=2015908542 instance=ExtResource("3_pgiel")]
+
+[node name="Oops" type="Area3D" parent="." unique_id=1214475935]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Oops" unique_id=1348444347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20, 0)
+shape = SubResource("BoxShape3D_xswbd")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Oops" unique_id=2013769708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+shape = SubResource("BoxShape3D_xswbd")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Oops" unique_id=1750221000]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 40, 0, 0)
+shape = SubResource("BoxShape3D_xswbd")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Oops" unique_id=1401727430]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -40, 0, 0)
+shape = SubResource("BoxShape3D_xswbd")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Oops" unique_id=1723485820]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 0, -40)
+shape = SubResource("BoxShape3D_xswbd")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Oops" unique_id=830716117]
+transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, 0, 0, 40)
+shape = SubResource("BoxShape3D_xswbd")
+
+[connection signal="body_entered" from="Oops" to="." method="_on_oops_body_entered"]

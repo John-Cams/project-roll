@@ -1,7 +1,58 @@
 [gd_scene format=3 uid="uid://v7hpyye72mw7"]
 
+[ext_resource type="Script" uid="uid://c4qjl86gfqopv" path="res://scripts/card.gd" id="1_tgmmg"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yiag5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yiag5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tgmmg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dx8l"]
+bg_color = Color(0.6, 0.6, 0.6, 0.19607843)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qf083"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40ytf"]
+bg_color = Color(0.6, 0.6, 0.6, 0.39215687)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5273u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qbjcq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqwud"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hddve"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_50dou"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ulcbd"]
+
 [node name="Card" type="Node2D" unique_id=140715927]
+script = ExtResource("1_tgmmg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=488750863]
+position = Vector2(62, 90)
+texture = SubResource("PlaceholderTexture2D_yiag5")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1506192307]
 offset_right = 125.0
 offset_bottom = 180.0
+color = Color(1, 1, 1, 0)
+
+[node name="Button" type="Button" parent="." unique_id=171274409]
+offset_right = 125.0
+offset_bottom = 180.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yiag5")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_tgmmg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4dx8l")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_qf083")
+theme_override_styles/hover = SubResource("StyleBoxFlat_40ytf")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_5273u")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_qbjcq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_dqwud")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hddve")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_50dou")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ulcbd")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,12 +1,122 @@
 [gd_scene format=3 uid="uid://b6n50ectypwv8"]
 
+[ext_resource type="Script" uid="uid://dbx542wnivxnc" path="res://scripts/main.gd" id="1_0bbpv"]
 [ext_resource type="PackedScene" uid="uid://v7hpyye72mw7" path="res://scenes/Card.tscn" id="1_elqb8"]
-[ext_resource type="PackedScene" uid="uid://df6k8ppf0nm25" path="res://scenes/Dice.tscn" id="2_rvslj"]
+[ext_resource type="PackedScene" uid="uid://c8nregsjni6lg" path="res://scenes/DiceView.tscn" id="4_rarhs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0bbpv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rarhs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rarhs"]
+bg_color = Color(0.8666667, 0.8666667, 0.4, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c01mt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0bbpv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jlsqs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q8u5g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lhr70"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wp0k4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjd11"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qmy6f"]
 
 [node name="Main" type="Node2D" unique_id=1808385422]
+script = ExtResource("1_0bbpv")
 
-[node name="Card" parent="." unique_id=140715927 instance=ExtResource("1_elqb8")]
+[node name="Stage" type="Label" parent="." unique_id=603497482]
+offset_right = 41.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Draw"
 
-[node name="Dice" parent="." unique_id=590207499 instance=ExtResource("2_rvslj")]
-position = Vector2(800, 400)
-outerColor = Color(1, 0, 0, 1)
+[node name="Count" type="Label" parent="." unique_id=869073906]
+offset_left = 5.0
+offset_top = 26.0
+offset_right = 46.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Draw"
+
+[node name="Deck" type="Node2D" parent="." unique_id=1337025412]
+position = Vector2(19, 554)
+
+[node name="ColorRect" type="ColorRect" parent="Deck" unique_id=425597929]
+offset_right = 125.0
+offset_bottom = 180.0
+
+[node name="Button" type="Button" parent="Deck" unique_id=1683453327]
+offset_right = 125.0
+offset_bottom = 180.0
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0bbpv")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_rarhs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rarhs")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_c01mt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0bbpv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_jlsqs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_q8u5g")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lhr70")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wp0k4")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_bjd11")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qmy6f")
+
+[node name="Label" type="Label" parent="Deck" unique_id=1006208637]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Draw"
+
+[node name="Hand" type="Node2D" parent="." unique_id=1467977695]
+position = Vector2(300, 700)
+
+[node name="ColorRect" type="ColorRect" parent="Hand" unique_id=2065507136]
+offset_right = 820.0
+offset_bottom = 200.0
+
+[node name="CardTray" type="Node2D" parent="." unique_id=2008097059]
+position = Vector2(1320, 320)
+
+[node name="ColorRect" type="ColorRect" parent="CardTray" unique_id=892193638]
+offset_right = 280.0
+offset_bottom = 580.0
+
+[node name="Card" parent="CardTray" unique_id=140715927 instance=ExtResource("1_elqb8")]
+position = Vector2(10, 10)
+
+[node name="Card2" parent="CardTray" unique_id=1882291328 instance=ExtResource("1_elqb8")]
+position = Vector2(145, 10)
+
+[node name="Card3" parent="CardTray" unique_id=749223245 instance=ExtResource("1_elqb8")]
+position = Vector2(10, 200)
+
+[node name="Card4" parent="CardTray" unique_id=1513040845 instance=ExtResource("1_elqb8")]
+position = Vector2(145, 200)
+
+[node name="Card5" parent="CardTray" unique_id=209658248 instance=ExtResource("1_elqb8")]
+position = Vector2(10, 390)
+
+[node name="Card6" parent="CardTray" unique_id=1931611805 instance=ExtResource("1_elqb8")]
+position = Vector2(145, 390)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=439812284]
+offset_left = 550.0
+offset_top = 200.0
+offset_right = 1050.0
+offset_bottom = 700.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1403041496]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(500, 500)
+render_target_update_mode = 4
+
+[node name="Control" parent="SubViewportContainer/SubViewport" unique_id=857461478 instance=ExtResource("4_rarhs")]
+
+[connection signal="pressed" from="Deck/Button" to="." method="_on_button_pressed"]
