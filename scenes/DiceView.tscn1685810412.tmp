@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c8nregsjni6lg"]
 
 [ext_resource type="Script" uid="uid://cig04s6eont46" path="res://scenes/dice_view.gd" id="1_e457s"]
+[ext_resource type="PackedScene" uid="uid://f3kvfi2r5ur5" path="res://scenes/Dice.tscn" id="3_pgiel"]
 
 [sub_resource type="Environment" id="Environment_145fb"]
 background_mode = 2
@@ -105,6 +106,8 @@ billboard = 1
 text = "Hello"
 font = SubResource("SystemFont_e457s")
 font_size = 60
+
+[node name="Dice" parent="." unique_id=2015908542 instance=ExtResource("3_pgiel")]
 
 [node name="Oops" type="Area3D" parent="." unique_id=1214475935]
 

@@ -31,27 +31,31 @@ bg_color = Color(0.8666667, 0.8666667, 0.4, 1)
 script = ExtResource("1_0bbpv")
 
 [node name="Stage" type="Label" parent="." unique_id=603497482]
-offset_right = 41.0
-offset_bottom = 23.0
+visible = false
+offset_left = 747.0
+offset_top = 59.0
+offset_right = 788.0
+offset_bottom = 82.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Draw"
 
-[node name="Count" type="Label" parent="." unique_id=869073906]
-offset_left = 5.0
-offset_top = 26.0
-offset_right = 46.0
-offset_bottom = 49.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Draw"
+[node name="Restart" type="Button" parent="Stage" unique_id=1679299038]
+layout_mode = 0
+offset_left = -40.0
+offset_top = 36.0
+offset_right = 94.0
+offset_bottom = 109.0
+text = "Back To Menu"
 
-[node name="Deck" type="Node2D" parent="." unique_id=1337025412]
+[node name="Start" type="Node2D" parent="." unique_id=1337025412]
 position = Vector2(19, 554)
 
-[node name="ColorRect" type="ColorRect" parent="Deck" unique_id=425597929]
+[node name="ColorRect" type="ColorRect" parent="Start" unique_id=425597929]
 offset_right = 125.0
 offset_bottom = 180.0
+color = Color(0, 1, 0, 1)
 
-[node name="Button" type="Button" parent="Deck" unique_id=1683453327]
+[node name="Button" type="Button" parent="Start" unique_id=1683453327]
 offset_right = 125.0
 offset_bottom = 180.0
 focus_mode = 0
@@ -67,11 +71,11 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_wp0k4")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_bjd11")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_qmy6f")
 
-[node name="Label" type="Label" parent="Deck" unique_id=1006208637]
+[node name="Label" type="Label" parent="Start" unique_id=1006208637]
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Draw"
+text = "Submit"
 
 [node name="Hand" type="Node2D" parent="." unique_id=1467977695]
 position = Vector2(300, 700)
@@ -87,23 +91,41 @@ position = Vector2(1320, 320)
 offset_right = 280.0
 offset_bottom = 580.0
 
+[node name="Label" type="Label" parent="CardTray" unique_id=1749276924]
+offset_right = 188.0
+offset_bottom = 501.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "1          2
+
+
+3          4
+
+
+5          6"
+
 [node name="Card" parent="CardTray" unique_id=140715927 instance=ExtResource("1_elqb8")]
 position = Vector2(10, 10)
 
 [node name="Card2" parent="CardTray" unique_id=1882291328 instance=ExtResource("1_elqb8")]
 position = Vector2(145, 10)
+cardInd = 1
 
 [node name="Card3" parent="CardTray" unique_id=749223245 instance=ExtResource("1_elqb8")]
 position = Vector2(10, 200)
+cardInd = 2
 
 [node name="Card4" parent="CardTray" unique_id=1513040845 instance=ExtResource("1_elqb8")]
 position = Vector2(145, 200)
+cardInd = 3
 
 [node name="Card5" parent="CardTray" unique_id=209658248 instance=ExtResource("1_elqb8")]
 position = Vector2(10, 390)
+cardInd = 4
 
 [node name="Card6" parent="CardTray" unique_id=1931611805 instance=ExtResource("1_elqb8")]
 position = Vector2(145, 390)
+cardInd = 5
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=439812284]
 offset_left = 550.0
@@ -119,4 +141,40 @@ render_target_update_mode = 4
 
 [node name="Control" parent="SubViewportContainer/SubViewport" unique_id=857461478 instance=ExtResource("4_rarhs")]
 
-[connection signal="pressed" from="Deck/Button" to="." method="_on_button_pressed"]
+[node name="Test" type="Control" parent="." unique_id=1378415429]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 455.0
+offset_top = 147.0
+offset_right = 505.0
+offset_bottom = 197.0
+
+[node name="EnemyOffset" type="Label" parent="Test" unique_id=1835578784]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "+4"
+
+[node name="EnemyVal" type="Label" parent="Test" unique_id=636967437]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 40.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "??"
+
+[node name="PlayerVal" type="Label" parent="Test" unique_id=186251000]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 47.0
+offset_right = 365.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "??"
+
+[connection signal="pressed" from="Stage/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Start/Button" to="." method="_on_button_pressed"]

@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://f3kvfi2r5ur5"]
 
 [ext_resource type="Script" uid="uid://bukl3ewktqvp7" path="res://scripts/dice.gd" id="1_3wfrs"]
-[ext_resource type="Texture2D" uid="uid://bwepo4tfk2by" path="res://assets/ONE.jpg" id="1_qpxmj"]
-[ext_resource type="Texture2D" uid="uid://cx7sbtncceodx" path="res://assets/TWO.jpg" id="2_bovnl"]
-[ext_resource type="Texture2D" uid="uid://fuq8w2aligpd" path="res://assets/THE.jpg" id="3_4xodc"]
-[ext_resource type="Texture2D" uid="uid://fffgwuj0s3s0" path="res://assets/FOR.jpg" id="4_ojhn1"]
-[ext_resource type="Texture2D" uid="uid://bl6n3egblefad" path="res://assets/SIX.jpg" id="5_ugyt8"]
-[ext_resource type="Texture2D" uid="uid://cyn00h5ckj7ba" path="res://assets/FIV.jpg" id="5_x35ey"]
+[ext_resource type="Texture2D" uid="uid://bpbixbkrw05bd" path="res://assets/ONE.png" id="2_1mws5"]
+[ext_resource type="Texture2D" uid="uid://cb3fhhwe5covl" path="res://assets/TWO.png" id="3_kck76"]
+[ext_resource type="Texture2D" uid="uid://dftk5fteu1ld7" path="res://assets/THE.png" id="4_kck76"]
+[ext_resource type="Texture2D" uid="uid://dblvn2rtf6i13" path="res://assets/FOR.png" id="5_3wfrs"]
+[ext_resource type="Texture2D" uid="uid://cqm5d6n8wqw2h" path="res://assets/FIV.png" id="6_onnry"]
+[ext_resource type="Texture2D" uid="uid://bfl5re4rxiawx" path="res://assets/SIX.png" id="7_f4tif"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5ssb4"]
 
@@ -23,7 +23,7 @@ subdivide_width = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lovj5"]
 shading_mode = 0
-albedo_texture = ExtResource("1_qpxmj")
+albedo_texture = ExtResource("2_1mws5")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_stngw"]
 material = SubResource("StandardMaterial3D_lovj5")
@@ -31,7 +31,7 @@ size = Vector2(0.9, 0.9)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iinw5"]
 shading_mode = 0
-albedo_texture = ExtResource("2_bovnl")
+albedo_texture = ExtResource("3_kck76")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ua237"]
 material = SubResource("StandardMaterial3D_iinw5")
@@ -39,7 +39,7 @@ size = Vector2(0.9, 0.9)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y24gt"]
 shading_mode = 0
-albedo_texture = ExtResource("3_4xodc")
+albedo_texture = ExtResource("4_kck76")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_32ifv"]
 material = SubResource("StandardMaterial3D_y24gt")
@@ -47,7 +47,7 @@ size = Vector2(0.9, 0.9)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gi7ht"]
 shading_mode = 0
-albedo_texture = ExtResource("4_ojhn1")
+albedo_texture = ExtResource("5_3wfrs")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_53grn"]
 material = SubResource("StandardMaterial3D_gi7ht")
@@ -55,7 +55,7 @@ size = Vector2(0.9, 0.9)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hpnp4"]
 shading_mode = 0
-albedo_texture = ExtResource("5_x35ey")
+albedo_texture = ExtResource("6_onnry")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_vo7rv"]
 material = SubResource("StandardMaterial3D_hpnp4")
@@ -63,7 +63,7 @@ size = Vector2(0.9, 0.9)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yxlwh"]
 shading_mode = 0
-albedo_texture = ExtResource("5_ugyt8")
+albedo_texture = ExtResource("7_f4tif")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uf10n"]
 material = SubResource("StandardMaterial3D_yxlwh")

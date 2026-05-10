@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl6n3egblefad"
-path.s3tc="res://.godot/imported/SIX.jpg-8153ba21c6832ff6258f96a9d2cdb464.s3tc.ctex"
+uid="uid://dftk5fteu1ld7"
+path.s3tc="res://.godot/imported/THE.png-7942fe0fa28e6d8feb4cb63119c6c9c5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/SIX.jpg"
-dest_files=["res://.godot/imported/SIX.jpg-8153ba21c6832ff6258f96a9d2cdb464.s3tc.ctex"]
+source_file="res://assets/THE.png"
+dest_files=["res://.godot/imported/THE.png-7942fe0fa28e6d8feb4cb63119c6c9c5.s3tc.ctex"]
 
 [params]
 

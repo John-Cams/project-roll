@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://clnj21y5lqkup"]
+
+[ext_resource type="Script" uid="uid://cexj0d25mv1x0" path="res://scenes/start.gd" id="1_8t08e"]
+
+[node name="Control" type="Control" unique_id=1556668377]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8t08e")
+
+[node name="Label2" type="Label" parent="." unique_id=818915021]
+layout_mode = 0
+offset_left = 707.0
+offset_top = 244.0
+offset_right = 941.0
+offset_bottom = 286.0
+theme_override_font_sizes/font_size = 30
+text = "by AriMaexisted"
+
+[node name="Label" type="Label" parent="." unique_id=118845044]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 178.0
+offset_right = 870.0
+offset_bottom = 233.0
+theme_override_font_sizes/font_size = 40
+text = "GAME"
+
+[node name="Label3" type="Label" parent="." unique_id=100277969]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 302.0
+offset_right = 1107.0
+offset_bottom = 389.0
+theme_override_font_sizes/font_size = 30
+text = "Disclaimer: Everything looks not good rn
+but I'll add graphics soon trust 🙏"
+
+[node name="Button" type="Button" parent="." unique_id=950530345]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 578.0
+offset_right = 796.0
+offset_bottom = 655.0
+theme_override_font_sizes/font_size = 50
+text = "Start"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyn00h5ckj7ba"
-path.s3tc="res://.godot/imported/FIV.jpg-cc219f00da2e963e3de154405ac92649.s3tc.ctex"
+uid="uid://bpbixbkrw05bd"
+path.s3tc="res://.godot/imported/ONE.png-e3b0f94f73a361596ba9624a23af7b50.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/FIV.jpg"
-dest_files=["res://.godot/imported/FIV.jpg-cc219f00da2e963e3de154405ac92649.s3tc.ctex"]
+source_file="res://assets/ONE.png"
+dest_files=["res://.godot/imported/ONE.png-e3b0f94f73a361596ba9624a23af7b50.s3tc.ctex"]
 
 [params]
 
