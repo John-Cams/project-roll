@@ -48,4 +48,14 @@ offset_bottom = 655.0
 theme_override_font_sizes/font_size = 50
 text = "Start"
 
+[node name="Button2" type="Button" parent="." unique_id=665560257]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 670.0
+offset_right = 796.0
+offset_bottom = 747.0
+theme_override_font_sizes/font_size = 50
+text = "Tutorial"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

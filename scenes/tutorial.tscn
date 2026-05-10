@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bbrp8odg7df7k"]
+
+[ext_resource type="Script" uid="uid://xc7qnckubcgn" path="res://scenes/tutorial.gd" id="1_c13y7"]
+[ext_resource type="Texture2D" uid="uid://bon7cy7ioewtu" path="res://assets/Tut1.png" id="2_8ho6b"]
+
+[node name="Tutorial" type="Control" unique_id=1190640122]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c13y7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=697819405]
+layout_mode = 0
+offset_left = 50.0
+offset_right = 1550.0
+offset_bottom = 700.0
+texture = ExtResource("2_8ho6b")
+
+[node name="Back" type="Button" parent="." unique_id=1471244232]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 700.0
+offset_right = 500.0
+offset_bottom = 800.0
+theme_override_font_sizes/font_size = 40
+text = "< Back"
+
+[node name="Next" type="Button" parent="." unique_id=621315948]
+layout_mode = 0
+offset_left = 1100.0
+offset_top = 700.0
+offset_right = 1400.0
+offset_bottom = 800.0
+theme_override_font_sizes/font_size = 40
+text = "Next >"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
